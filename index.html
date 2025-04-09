@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chromatic Tuner</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Chromatic Tuner</h1>
+        
+        <div class="tuner-display">
+            <div class="frequency-display">
+                <span id="frequency">-- Hz</span>
+            </div>
+            <div class="note-display">
+                <span id="note">--</span>
+                <span id="cents">±0</span>
+            </div>
+            <div class="tuning-indicator">
+                <div class="needle"></div>
+            </div>
+        </div>
+
+        <div class="controls">
+            <button id="startButton" class="button">Start Tuning</button>
+            <div class="status" id="status">Microphone access required</div>
+        </div>
+    </div>
+    <script src="tuner.js"></script>
+</body>
+</html> 

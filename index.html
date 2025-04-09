@@ -27,6 +27,48 @@
             <button id="startButton" class="button">Start Tuning</button>
             <div class="status" id="status">Microphone access required</div>
         </div>
+
+        <!-- New Features Section -->
+        <div class="features-section">
+            <!-- Calibration Control -->
+            <div class="control-group">
+                <label for="calibration">Reference Pitch (A4):</label>
+                <input type="range" id="calibration" min="430" max="450" value="440" step="1">
+                <span id="calibrationValue">440 Hz</span>
+            </div>
+
+            <!-- Sensitivity Control -->
+            <div class="control-group">
+                <label for="sensitivity">Sensitivity:</label>
+                <input type="range" id="sensitivity" min="0" max="100" value="50" step="1">
+                <span id="sensitivityValue">50%</span>
+            </div>
+
+            <!-- Metronome Controls -->
+            <div class="control-group">
+                <label for="metronomeBpm">Metronome BPM:</label>
+                <input type="range" id="metronomeBpm" min="40" max="200" value="120" step="1">
+                <span id="metronomeValue">120 BPM</span>
+                <button id="metronomeToggle" class="button small">Start Metronome</button>
+            </div>
+
+            <!-- Recording Controls -->
+            <div class="control-group">
+                <button id="recordToggle" class="button small">Start Recording</button>
+                <button id="downloadRecording" class="button small" disabled>Download Recording</button>
+            </div>
+        </div>
+
+        <!-- Spectrum Analyzer -->
+        <div class="spectrum-container">
+            <canvas id="spectrumCanvas"></canvas>
+        </div>
+
+        <!-- History Display -->
+        <div class="history-container">
+            <h2>Recent Notes</h2>
+            <div id="noteHistory" class="note-history"></div>
+        </div>
     </div>
     <script src="tuner.js"></script>
 </body>
